@@ -32,6 +32,7 @@ namespace pussy
                             given_safeword += keyChar;
                             if (given_safeword == SAFEWORD)
                             {
+                                Wallpaper.Set("C:\\Users\\user\\OneDrive\\Изображения\\Saved Pictures\\папаша2.jpg", Wallpaper.Style.Fill);
                                 Environment.Exit(0);
                             }
                         } else
@@ -43,7 +44,7 @@ namespace pussy
                         {
                             Stream fileStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
                             player = new SoundPlayer(fileStream);
-                            Wallpaper.Set($"pussy.Wallpapers.{keyChar}.jpg", Wallpaper.Style.Fill);
+                            Wallpaper.Set($"C:\\Users\\user\\OneDrive\\Документы\\pussy-master\\pussy\\Wallpapers\\{keyChar}.jpg", Wallpaper.Style.Fill);
                             player.Play();
                             
                         }
