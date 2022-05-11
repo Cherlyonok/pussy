@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+    <PropertyGroup>
+		<LangVersion>10.0</LangVersion>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<IsPublishable>True</IsPublishable>
+		<Nullable>disable</Nullable>
+		<Authors>Lester Covey</Authors>
+		<Description>get into it</Description>
+		<Copyright>Copyright Lester Covey, 2022</Copyright>
+		<ApplicationIcon>713t.ico</ApplicationIcon>
+		<Version>0.1.1</Version>
+	</PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Sounds\a.wav" />
+      <None Remove="Sounds\b.wav" />
+      <None Remove="Sounds\c.wav" />
+      <None Remove="Sounds\d.wav" />
+      <None Remove="Sounds\e.wav" />
+      <None Remove="Sounds\f.wav" />
+      <None Remove="Sounds\g.wav" />
+      <None Remove="Sounds\h.wav" />
+      <None Remove="Sounds\i.wav" />
+      <None Remove="Sounds\j.wav" />
+      <None Remove="Sounds\k.wav" />
+      <None Remove="Sounds\l.wav" />
+      <None Remove="Sounds\m.wav" />
+      <None Remove="Sounds\n.wav" />
+      <None Remove="Sounds\o.wav" />
+      <None Remove="Sounds\p.wav" />
+      <None Remove="Sounds\q.wav" />
+      <None Remove="Sounds\r.wav" />
+      <None Remove="Sounds\s.wav" />
+      <None Remove="Sounds\t.wav" />
+      <None Remove="Sounds\u.wav" />
+      <None Remove="Sounds\v.wav" />
+      <None Remove="Sounds\w.wav" />
+      <None Remove="Sounds\x.wav" />
+      <None Remove="Sounds\y.wav" />
+      <None Remove="Sounds\z.wav" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="713t.ico" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Sounds\a.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\b.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\c.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\d.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\e.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\f.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\g.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\h.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\i.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\j.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\k.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\l.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\m.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\n.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\o.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\p.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\q.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\r.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\s.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\t.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\u.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\v.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\w.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\x.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\y.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Sounds\z.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="KeystrokeAPI" Version="1.0.6.4" />
+    </ItemGroup>
+
+</Project>
