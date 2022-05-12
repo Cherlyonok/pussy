@@ -16,6 +16,8 @@ namespace pussy
     {
         const string SAFEWORD = "pussy";
         static string given_safeword = "";
+        static bool isStarted = false;
+        static string wpprpath;
         [STAThread]
         static void Main()
         {
@@ -26,13 +28,19 @@ namespace pussy
                 {
                     if (key.KeyCode.ToString().Length == 1)
                     {
+                        if (!isStarted)
+                        {
+                            wpprpath = DesktopManagement.GetCurrentDesktopWallpaper();
+                            isStarted = true;
+                        }
                         char keyChar = char.Parse(key.KeyCode.ToString().ToLower());
+
                         if (keyChar == SAFEWORD[given_safeword.Length])
                         {
                             given_safeword += keyChar;
                             if (given_safeword == SAFEWORD)
                             {
-                                Wallpaper.Set("C:\\Users\\user\\OneDrive\\Изображения\\Saved Pictures\\папаша2.jpg", Wallpaper.Style.Fill);
+                                Wallpaper.Set(wpprpath, Wallpaper.Style.Fill);
                                 Environment.Exit(0);
                             }
                         } else
@@ -124,4 +132,20 @@ namespace pussy
                 SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
         }
     }
+    public sealed class DesktopManagement
+    {
+        private const UInt32 SPI_GETDESKWALLPAPER = 0x73;
+        private const int MAX_PATH = 260;
+ 
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        public static extern int SystemParametersInfo(UInt32 uAction, int uParam, string lpvParam, int fuWinIni);
+ 
+        public static string GetCurrentDesktopWallpaper()
+        {
+            string currentWallpaper = new string('\0', MAX_PATH);
+            SystemParametersInfo(SPI_GETDESKWALLPAPER, currentWallpaper.Length, currentWallpaper, 0);
+            return currentWallpaper.Substring(0, currentWallpaper.IndexOf('\0'));
+        }
+    }
+
 }
