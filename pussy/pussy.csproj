@@ -11,7 +11,7 @@
 		<Description>get into it</Description>
 		<Copyright>Copyright Lester Covey, 2022</Copyright>
 		<ApplicationIcon>713t.ico</ApplicationIcon>
-		<Version>0.1.1</Version>
+		<Version>0.2.0</Version>
 	</PropertyGroup>
 
     <ItemGroup>
@@ -42,7 +42,9 @@
       <None Remove="Sounds\y.wav" />
       <None Remove="Sounds\z.wav" />
     </ItemGroup>
+  
 
+  
     <ItemGroup>
       <Content Include="713t.ico" />
     </ItemGroup>
@@ -124,6 +126,115 @@
         <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </EmbeddedResource>
       <EmbeddedResource Include="Sounds\z.wav">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+  
+    <ItemGroup>
+      <None Remove="Wallpapers\a.jpg" />
+      <None Remove="Wallpapers\b.jpg" />
+      <None Remove="Wallpapers\c.jpg" />
+      <None Remove="Wallpapers\d.jpg" />
+      <None Remove="Wallpapers\e.jpg" />
+      <None Remove="Wallpapers\f.jpg" />
+      <None Remove="Wallpapers\g.jpg" />
+      <None Remove="Wallpapers\h.jpg" />
+      <None Remove="Wallpapers\i.jpg" />
+      <None Remove="Wallpapers\j.jpg" />
+      <None Remove="Wallpapers\k.jpg" />
+      <None Remove="Wallpapers\l.jpg" />
+      <None Remove="Wallpapers\m.jpg" />
+      <None Remove="Wallpapers\n.jpg" />
+      <None Remove="Wallpapers\o.jpg" />
+      <None Remove="Wallpapers\p.jpg" />
+      <None Remove="Wallpapers\q.jpg" />
+      <None Remove="Wallpapers\r.jpg" />
+      <None Remove="Wallpapers\s.jpg" />
+      <None Remove="Wallpapers\t.jpg" />
+      <None Remove="Wallpapers\u.jpg" />
+      <None Remove="Wallpapers\v.jpg" />
+      <None Remove="Wallpapers\w.jpg" />
+      <None Remove="Wallpapers\x.jpg" />
+      <None Remove="Wallpapers\y.jpg" />
+      <None Remove="Wallpapers\z.jpg" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Wallpapers\a.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\b.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\c.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\d.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\e.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\f.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\g.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\h.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\i.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\j.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\k.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\l.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\m.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\n.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\o.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\p.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\q.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\r.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\s.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\t.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\u.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\v.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\w.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\x.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\y.jpg">
+        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      </EmbeddedResource>
+      <EmbeddedResource Include="Wallpapers\z.jpg">
         <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </EmbeddedResource>
     </ItemGroup>

@@ -15,9 +15,9 @@ namespace pussy
     internal static class Program 
     {
         const string SAFEWORD = "pussy";
-        static string given_safeword = "";
+        static string givenSafeword = "";
         static bool isStarted = false;
-        static string wpprpath;
+        static string wallpaperPath;
         [STAThread]
         static void Main()
         {
@@ -30,29 +30,30 @@ namespace pussy
                     {
                         if (!isStarted)
                         {
-                            wpprpath = DesktopManagement.GetCurrentDesktopWallpaper();
+                            wallpaperPath = DesktopManagement.GetCurrentDesktopWallpaper();
                             isStarted = true;
                         }
                         char keyChar = char.Parse(key.KeyCode.ToString().ToLower());
 
-                        if (keyChar == SAFEWORD[given_safeword.Length])
+                        if (keyChar == SAFEWORD[givenSafeword.Length])
                         {
-                            given_safeword += keyChar;
-                            if (given_safeword == SAFEWORD)
+                            givenSafeword += keyChar;
+                            if (givenSafeword == SAFEWORD)
                             {
-                                Wallpaper.Set(wpprpath, Wallpaper.Style.Fill);
+                                Wallpaper.Set(wallpaperPath, Wallpaper.Style.Fill);
                                 Environment.Exit(0);
                             }
                         } else
                         {
-                            given_safeword = "";
+                            givenSafeword = "";
                         }
                         string fileName = $"pussy.Sounds.{keyChar}.wav";
                         try
                         {
                             Stream fileStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
                             player = new SoundPlayer(fileStream);
-                            Wallpaper.Set($"C:\\Users\\user\\OneDrive\\Документы\\pussy-master\\pussy\\Wallpapers\\{keyChar}.jpg", Wallpaper.Style.Fill);
+                            string wallpaperName = $"pussy.Wallpapers.{keyChar}.jpg";
+                            Wallpaper.Set(wallpaperName, Wallpaper.Style.Fill);
                             player.Play();
                             
                         }
@@ -74,7 +75,7 @@ namespace pussy
         const int SPIF_SENDWININICHANGE = 0x02;
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
+        static extern int SystemParametersInfo(int uiAction, int uiParam, string pvParam, int fWinIni);
 
         public enum Style : int
         {
@@ -96,33 +97,33 @@ namespace pussy
             RegistryKey key = Registry.CurrentUser.OpenSubKey(@"Control Panel\Desktop", true);
             if (style == Style.Fill)
             {
-                key.SetValue(@"WallpaperStyle", 10.ToString());
-                key.SetValue(@"TileWallpaper", 0.ToString());
+                key.SetValue("WallpaperStyle", "10");
+                key.SetValue("TileWallpaper", "0");
             }
             if (style == Style.Fit)
             {
-                key.SetValue(@"WallpaperStyle", 6.ToString());
-                key.SetValue(@"TileWallpaper", 0.ToString());
+                key.SetValue("WallpaperStyle", "6");
+                key.SetValue("TileWallpaper", "0");
             }
             if (style == Style.Span) 
             {
-                key.SetValue(@"WallpaperStyle", 22.ToString());
-                key.SetValue(@"TileWallpaper", 0.ToString());
+                key.SetValue("WallpaperStyle", "22");
+                key.SetValue("TileWallpaper", "0");
             }
             if (style == Style.Stretch)
             {
-                key.SetValue(@"WallpaperStyle", 2.ToString());
-                key.SetValue(@"TileWallpaper", 0.ToString());
+                key.SetValue("WallpaperStyle", "2");
+                key.SetValue("TileWallpaper", "0");
             }
             if (style == Style.Tile)
             {
-                key.SetValue(@"WallpaperStyle", 0.ToString());
-                key.SetValue(@"TileWallpaper", 1.ToString());
+                key.SetValue("WallpaperStyle", "0");
+                key.SetValue("TileWallpaper", "1");
             }
             if (style == Style.Center)
             {
-                key.SetValue(@"WallpaperStyle", 0.ToString());
-                key.SetValue(@"TileWallpaper", 0.ToString());
+                key.SetValue("WallpaperStyle", "0");
+                key.SetValue("TileWallpaper", "0");
             }
 
             SystemParametersInfo(
@@ -138,7 +139,7 @@ namespace pussy
         private const int MAX_PATH = 260;
  
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        public static extern int SystemParametersInfo(UInt32 uAction, int uParam, string lpvParam, int fuWinIni);
+        public static extern int SystemParametersInfo(UInt32 uiAction, int uiParam, string pvParam, int fWinIni);
  
         public static string GetCurrentDesktopWallpaper()
         {
