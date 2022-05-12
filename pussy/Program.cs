@@ -52,7 +52,7 @@ namespace pussy
                         {
                             Stream fileStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
                             player = new SoundPlayer(fileStream);
-                            string wallpaperName = $"pussy.Wallpapers.{keyChar}.jpg";
+                            string wallpaperName = $"pussy.Wallpapers.{keyChar}.jpg"; //no idea
                             Wallpaper.Set(wallpaperName, Wallpaper.Style.Fill);
                             player.Play();
                             
